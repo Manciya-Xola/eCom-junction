@@ -12,6 +12,7 @@ body{
 }
 html, body {
   margin: 0;
+  overflow: hidden;
 }
 header{
   height: 256px;
@@ -105,4 +106,23 @@ button.items-number{
 }
 button:hover{
   cursor: pointer;
+}
+
+/* Footer */
+
+footer{
+  position: absolute;
+  width: 1442px;
+  height: 159px;
+  border-top: 1px solid #000;
+  bottom: 0px;
+  display: flex;
+  justify-content: center;
+}
+footer .img-container{
+  height: 159px;
+  width: 218px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
