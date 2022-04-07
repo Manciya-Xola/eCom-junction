@@ -8,22 +8,20 @@
 body{
   font-family: sans-serif;
   padding: 0;
-  overflow: auto;
 }
 html, body {
   margin: 0;
-  overflow: hidden;
 }
 header{
   height: 256px;
-  width: 1442px;
+  width: 100%;
 }
 .discount-banner{
   display: flex;
   align-items: center;
   justify-content: center;
   justify-content: center;
-  width: 1442px;
+  width: 100%;
   text-align: center;
   background-color: #000;
   color: white;
@@ -111,7 +109,7 @@ button:hover{
 /* Footer */
 
 footer{
-  width: 1442px;
+  width: 100%;
   height: 159px;
   border-top: 1px solid #000;
   bottom: 0px;
@@ -131,7 +129,7 @@ footer .img-container{
 .banner{
   padding: 81px 0px;
   padding-left: 76px;
-  width: 1728px;
+  width: 100%;
   height: 384px;
   background-image: url("./img/banner.jpg");
 }
@@ -148,4 +146,120 @@ footer .img-container{
   text-align: center;
   color: #fff;
   background: rgba(0, 0, 0, 0.5);
+}
+/*Product*/
+
+.product{
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  height: 944px;
+}
+.product-image{
+  position: relative;
+}
+.product-image img{
+  display: block;
+  width: 500px;
+  height: 500px;
+  margin-bottom: 40px;
+}
+
+.sale-percent{
+  position: absolute;
+  left: 68.8%;
+  right: 0%;
+  top: 2.97%;
+  bottom: 90.04%;
+  width: 156px;
+  height: 66px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 35px;
+  display: flex;
+  align-items: center;
+  text-align: right;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+}
+
+.product-details{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 444px;
+  padding-left: 26px;
+  padding-right: 34px;
+}
+.title{
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 45px;
+  line-height: 53px;
+
+  display: flex;
+  align-items: center;
+
+  color: #000000;
+}
+.description{
+  margin-top: 19px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 30px;
+  line-height: 35px;
+
+  color: #000000;
+
+}
+.price-cart{
+  height: 118px;
+  display: flex;
+  justify-content: space-between;
+  padding-right: 28px;
+  align-items: flex-end;
+}
+
+.previous{
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 50px;
+  line-height: 59px;
+
+  display: flex;
+  align-items: center;
+  text-decoration-line: line-through;
+
+  color: #890000;
+}
+
+.current{
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 59px;
+
+  display: flex;
+  align-items: center;
+
+  color: #000000;
+}
+.add-to-cart{
+  width: 61px;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 10px;
+}
+.add-to-cart button{
+  border: none;
+  background: #fff;
 }
