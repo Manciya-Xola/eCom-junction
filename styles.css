@@ -190,13 +190,14 @@ article{
 .product{
   display: flex;
   flex-direction: column;
-  height: calc(600);
+  height: 794px;
   margin: 10px 0px;
 }
 .product-image{
   position: relative;
 }
 .product-image img{
+  position: relative;
   display: block;
   width: 100%;
   height: 350px;
@@ -205,7 +206,7 @@ article{
 
 .sale-percent{
   position: absolute;
-  left: 65.4%;
+  left: 65%;
   right: 0%;
   top: 2.97%;
   bottom: 90.04%;
@@ -229,15 +230,15 @@ article{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 444px;
+  height: 400px;
   padding-left: 26px;
   padding-right: 34px;
 }
-.title{
+.description h1{
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 700;
-  font-size: 45px;
+  font-size: 38px;
   line-height: 53px;
 
   display: flex;
@@ -245,19 +246,17 @@ article{
 
   color: #000000;
 }
-.description{
+.description h2{
   margin-top: 19px;
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 300;
   font-size: 30px;
   line-height: 35px;
-
   color: #000000;
-
 }
 .price-cart{
-  height: 118px;
+  height: 110px;
   display: flex;
   justify-content: space-between;
   padding-right: 28px;
@@ -268,7 +267,7 @@ article{
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 400;
-  font-size: 50px;
+  font-size: 30px;
   line-height: 59px;
 
   display: flex;
@@ -282,7 +281,7 @@ article{
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 700;
-  font-size: 50px;
+  font-size: 30px;
   line-height: 59px;
 
   display: flex;
@@ -301,7 +300,9 @@ article{
   border: none;
   background: #fff;
 }
-
+.add-to-cart button img{
+  height: 50px;
+}
 /* Product List*/
 
 .list-items{
