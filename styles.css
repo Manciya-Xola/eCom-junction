@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Arvo:ital,wght@1,700&display=swap');
 *{
   margin: 0;
   padding: 0;
@@ -7,10 +7,12 @@
 }
 body{
   font-family: sans-serif;
-  padding: 0;
+  padding: 0px;
+  box-sizing: border-box;
 }
 html, body {
   margin: 0;
+  padding: 0px;
 }
 header{
   height: 256px;
@@ -20,29 +22,39 @@ header{
   display: flex;
   align-items: center;
   justify-content: center;
-  justify-content: center;
   width: 100%;
+  height: 98px;
   text-align: center;
   background-color: #000;
-  color: white;
-  height: 98px;
-  font: 'Roboto';
+}
+.discount-banner h1{
+  font-family: 'Roboto';
+  font-style: normal;
   font-weight: 400;
   font-size: 30px;
   line-height: 35px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+  color: #FFFFFF;
   text-transform: uppercase;
 }
+
+/*Navigation bar*/
+
 nav{
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0px 45px;
+  width: 100%;
 }
-/* .link-logo img{
-  width: 261px;
-  height: 100px;
-  margin-right: 20px;
-} */
+.link-logo{
+  display: flex;
+  height: 157px;
+  align-items: center;
+}
 .menu {
   display: flex;
   flex-direction: row;
@@ -70,17 +82,11 @@ nav{
   align-items: center;
   padding: 5px 14px;
 }
-.link-logo{
-  display: flex;
-  height: 157px;
-  width: 1442px;
-  align-items: center;
-}
+
 .cart-profile{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  width: 300px;
 }
 .cart{
   display: flex;
@@ -98,7 +104,7 @@ button.items-number{
   width: 32px;
   height: 32px;
   border-radius: 35px;
-  margin-right: 77px;
+  /* margin-right: 77px; */
   border: none;
   background-color: #C4C4C4;
 }
@@ -136,6 +142,13 @@ footer .img-container{
 .banner-text-container{
   width: 486px;
   height: 221px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 76px 0px;
+  background: rgba(0, 0, 0, 0.5);
+}
+.banner-text-container h1{
   font-family: 'Rockwell Extra Bold';
   font-style: normal;
   font-weight: 800;
@@ -144,30 +157,55 @@ footer .img-container{
   display: flex;
   align-items: center;
   text-align: center;
-  color: #fff;
-  background: rgba(0, 0, 0, 0.5);
+  
+  color: #FFFFFF;
+}
+/*Title of products*/
+.heading{
+  width: 304px;
+  height: 70px;
+  margin: 50px 0px;
+}
+.heading h1{
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 60px;
+  line-height: 70px;
+
+  color: #000000;
 }
 /*Product*/
-
+article{
+  width: 100%;
+}
+.products{
+  padding: 0px 10px;
+}
+.products ul{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 39px;
+}
 .product{
   display: flex;
   flex-direction: column;
-  width: 500px;
-  height: 944px;
+  height: calc(600);
+  margin: 10px 0px;
 }
 .product-image{
   position: relative;
 }
 .product-image img{
   display: block;
-  width: 500px;
-  height: 500px;
+  width: 100%;
+  height: 350px;
   margin-bottom: 40px;
 }
 
 .sale-percent{
   position: absolute;
-  left: 68.8%;
+  left: 65.4%;
   right: 0%;
   top: 2.97%;
   bottom: 90.04%;
@@ -262,4 +300,52 @@ footer .img-container{
 .add-to-cart button{
   border: none;
   background: #fff;
+}
+
+/* Product List*/
+
+.list-items{
+  display: flex;
+  justify-content: space-between;
+  /* padding: 0px 72px; */
+  list-style-type: none;
+}
+.show-more{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 72px;
+  margin-bottom: 350px;
+}
+.show-more .promo-btn button {
+  width: 374px;
+  height: 80px;
+  color: #fff;
+  border: none;
+  box-sizing: border-box;
+  background: #C48B98;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 26px;
+  text-transform: uppercase;
+}
+.show-more .promo-btn button:hover{
+  background: #DAA0AD;
+}
+.heading{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.heading h1{
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 60px;
+  line-height: 70px;
+
+  color: #000000;
 }
