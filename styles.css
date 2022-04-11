@@ -378,7 +378,7 @@ article{
   width: 600px;
   height: 600px;
 }
-.description{
+.description-product{
   width: 600px;
   height: 600px;
   display: flex;
@@ -386,7 +386,7 @@ article{
   justify-content: space-between;
   padding: 0px 45px;
 }
-.description .title-desc{
+.description-product .title-desc{
   display: flex;
   flex-direction: column;
 }
@@ -419,7 +419,7 @@ article{
   line-height: 35px;
   color: #000000;
 }
-.description .price-cart{
+.description-product .price-cart{
   width: 455px;
   height: 200px;
   display: flex;
