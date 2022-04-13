@@ -1,3 +1,4 @@
+import { addToCart } from "./shoppingCart.js";
 import { calculateDiscount } from "./utils.js";
 
 /**
@@ -12,7 +13,7 @@ import { calculateDiscount } from "./utils.js";
  * ```
  */
 function generateProductCard(product) {
-  console.log(product);
+  //console.log(product);
   const item = document.createElement("li");
   item.id = product.id;
   const product_div = document.createElement("div");
@@ -97,7 +98,9 @@ function generateProductCard(product) {
   add_button.appendChild(add_img)
   return item;
 }
+
 function onAddToCart(product) {
+  addToCart(product);
   console.log(product.id);
 }
 export {generateProductCard};
