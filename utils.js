@@ -19,4 +19,22 @@
     console.error(error);
   }
 }
-export {doFetch};
+/**
+ * 
+ * @param {float} current_price 
+ * @param {float} discounted_price 
+ * @returns discount_percentage
+ * @example
+ * ```js
+ * const current_price = 100;
+ * const discounted_price = 25;
+ * calculateDiscount(current_price, discounted_price);
+ * //return discount_percentage;
+ * ```
+ */
+function calculateDiscount(current_price, discounted_price) {
+  const discount = discounted_price-current_price;
+  const discount_percentage = Math.round(discount/current_price *100);
+  return discount_percentage;
+}
+export {doFetch, calculateDiscount};
