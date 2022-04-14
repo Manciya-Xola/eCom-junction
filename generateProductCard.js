@@ -1,112 +1,66 @@
-import { addToCart } from "./shoppingCart.js";
-import { calculateDiscount } from "./utils.js";
-
-/**
- * Create a product card and return an html of it
- * @param {JSON} product 
- * @returns html
- * @example
- * ```js
- * const product = {name:"apple",store:"yoco"};
- * generateProductCard(product);
- * //return html product card
- * ```
- */
 function generateProductCard(product) {
-  //console.log(product);
-  const item = document.createElement("li");
-  item.id = product.id;
-  const product_div = document.createElement("div");
-  product_div.classList.add("product");
-  item.appendChild(product_div)
-  const img_div = document.createElement("div");
-  img_div.classList.add("product-image");
-  product_div.appendChild(img_div)
-  const img_link = document.createElement("a");
-  img_link.href = `http://127.0.0.1:5500/eCom-junction/product.html?id=${product.id}`;
-  const img_img = document.createElement("img");
-  img_img.src = product.image;
-  img_img.alt = "Product image";
-  img_div.appendChild(img_link);
-  img_link.appendChild(img_img);
-
-  const discount = calculateDiscount(product.discounted_price,product.price);
-  if ((discount)!=0) {
-    const sale = document.createElement("div");
-    sale.classList.add("sale-percent")
-    img_div.appendChild(sale);
-    const percent = document.createElement("span");
-    percent.textContent = discount;
-    sale.appendChild(percent);
-    sale.appendChild(document.createTextNode('% OFF'));
-  }
-  
-  //product details
-  const details_div = document.createElement("div");
-  details_div.classList.add("product-details");
-  product_div.appendChild(details_div)
-  //description
+  console.log(product)
+  const product_container = document.createElement("div");
+  product_container.classList.add('product-container');
+  const image_div = document.createElement("div");
+  image_div.classList.add('image');
+  product_container.appendChild(image_div);
+  const image_img = document.createElement("img");
+  image_img.src = product.image;
+  image_img.alt = "Product image";
+  image_div.appendChild(image_img);
   const description_div = document.createElement("div");
-  details_div.classList.add("description");
-  details_div.appendChild(description_div);
-  //title and description
-  const heading_link = document.createElement("a");
-  heading_link.href = `http://127.0.0.1:5500/eCom-junction/product.html?id=${product.id}`;
-  const title_h1 = document.createElement("h1");
-  title_h1.classList.add("title");
-  title_h1.id = "title";
-  title_h1.textContent = product.name;
-  description_div.appendChild(heading_link);
-  heading_link.appendChild(title_h1);
-  const desc_div = document.createElement("h2");
-  desc_div.classList.add("short-description");
-  desc_div.id = "short-description";
-  desc_div.textContent = product.description;
-  description_div.appendChild(desc_div);
-
-  //Cart and Price
-  const price_cart_div = document.createElement("div");
-  price_cart_div.classList.add("price-cart");
-  product_div.appendChild(price_cart_div);
-
-  //price
+  description_div.classList.add("description-product");
+  product_container.appendChild(description_div);
+  const heading_div = document.createElement("div");
+  heading_div.classList.add("title-desc");
+  description_div.appendChild(heading_div);
+  const title_div = document.createElement("div");
+  title_div.classList.add("title");
+  heading_div.appendChild(title_div);
+  const heading_h3 = document.createElement("h3");
+  heading_h3.textContent = product.name;
+  title_div.appendChild(heading_h3);
+  const by_div = document.createElement("div");
+  by_div.classList.add("by");
+  heading_div.appendChild(by_div)
+  const by_h4 = document.createElement("h4");
+  by_h4.textContent = 'by';
+  const span_by = document.createElement("span");
+  span_by.textContent = product.company;
+  by_h4.appendChild(span_by)
+  by_div.appendChild(by_h4)
+  const short_div = document.createElement("div");
+  short_div.classList.add("short-desc");
+  heading_div.appendChild(short_div);
+  const short_h4 = document.createElement("h4");
+  short_h4.textContent = product.description;
+  short_div.appendChild(short_h4);
+  const price_cart = document.createElement("div");
+  price_cart.classList.add("price-cart");
+  description_div.appendChild(price_cart);
   const price_div = document.createElement("div");
   price_div.classList.add("price");
-  price_cart_div.appendChild(price_div);
-
-  if ((discount)!=0) {
-    const previous_div = document.createElement("h4");
-    previous_div.classList.add("previous");
-    previous_div.id = "previous";
-    previous_div.textContent = "R "+product.price;
-    price_div.appendChild(previous_div);
-  }
-  
-  const current_div = document.createElement("h4");
-  current_div.classList.add("current");
-  current_div.id = "current";
-  current_div.textContent = "R "+product.discounted_price;
-  price_div.appendChild(current_div);
-
-  //add to cart button
-  const add_div = document.createElement("div");
-  add_div.classList.add("add-to-cart");
-  price_cart_div.appendChild(add_div);
-  const add_button = document.createElement("button");
-  add_button.id = "add-item";
-  add_button.addEventListener('click',() =>{
-    onAddToCart(product)
-  });
-  add_div.appendChild(add_button);
-  const add_img = document.createElement("img");
-  add_img.src = "./img/Vector.jpg";
-  add_img.alt = "add to cart";
-  add_button.appendChild(add_img)
-  return item;
-}
-
-function onAddToCart(product) {
-  addToCart(product);
-  console.log(product.id);
+  price_cart.appendChild(price_div);
+  const previous_h4 = document.createElement("h4");
+  previous_h4.classList.add("previous");
+  previous_h4.textContent = `R ${product.price}`;
+  price_div.appendChild(previous_h4);
+  const current_h4 = document.createElement("h4");
+  current_h4.classList.add("current");
+  current_h4.textContent = `R ${product.discounted_price}`;
+  price_div.appendChild(current_h4);
+  const add_to_cart_div = document.createElement("div");
+  add_to_cart_div.classList.add("add-to-cart");
+  price_cart.appendChild(add_to_cart_div);
+  const promo_btn_div = document.createElement("div");
+  promo_btn_div.classList.add("promo-btn");
+  add_to_cart_div.appendChild(promo_btn_div);
+  const add_to_cart_btn = document.createElement("button");
+  promo_btn_div.appendChild(add_to_cart_btn);
+  const btn_span = document.createElement("span");
+  btn_span.textContent = "add to cart";
+  add_to_cart_btn.appendChild(btn_span);
+  return product_container;
 }
 export {generateProductCard};
