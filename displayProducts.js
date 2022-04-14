@@ -1,4 +1,4 @@
-import { generateProductCard } from "./generateProductCard.js";
+import { generateProductsCard } from "./generateProductsCard.js";
 
 /**
  * Display the products in HTML
@@ -14,7 +14,7 @@ function displayProducts(products) {
   const listItem = document.getElementById('products');
   listItem.textContent = '';
   products.forEach(product =>{
-    listItem.appendChild(generateProductCard(product))
+    listItem.appendChild(generateProductsCard(product))
   })
    
 }
