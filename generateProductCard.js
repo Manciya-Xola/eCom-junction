@@ -22,10 +22,13 @@ function generateProductCard(product) {
   const img_div = document.createElement("div");
   img_div.classList.add("product-image");
   product_div.appendChild(img_div)
+  const img_link = document.createElement("a");
+  img_link.href = `http://127.0.0.1:5500/eCom-junction/product.html?id=${product.id}`;
   const img_img = document.createElement("img");
   img_img.src = product.image;
   img_img.alt = "Product image";
-  img_div.appendChild(img_img)
+  img_div.appendChild(img_link);
+  img_link.appendChild(img_img);
 
   const discount = calculateDiscount(product.discounted_price,product.price);
   if ((discount)!=0) {
@@ -47,11 +50,14 @@ function generateProductCard(product) {
   details_div.classList.add("description");
   details_div.appendChild(description_div);
   //title and description
-  const title_div = document.createElement("h1");
-  title_div.classList.add("title");
-  title_div.id = "title";
-  title_div.textContent = product.name;
-  description_div.appendChild(title_div);
+  const heading_link = document.createElement("a");
+  heading_link.href = `http://127.0.0.1:5500/eCom-junction/product.html?id=${product.id}`;
+  const title_h1 = document.createElement("h1");
+  title_h1.classList.add("title");
+  title_h1.id = "title";
+  title_h1.textContent = product.name;
+  description_div.appendChild(heading_link);
+  heading_link.appendChild(title_h1);
   const desc_div = document.createElement("h2");
   desc_div.classList.add("short-description");
   desc_div.id = "short-description";
