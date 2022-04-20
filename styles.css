@@ -315,6 +315,9 @@ article{
   /* padding: 0px 72px; */
   list-style-type: none;
 }
+/* .products ul li:nth-child(n+4) {
+  display:none;
+} */
 .show-more{
   display: flex;
   justify-content: center;
@@ -499,4 +502,217 @@ article{
 .by h4 span{
   margin-left: 10px;
   font-weight: 400;
+}
+
+/*Checkout*/
+.cart-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 85px;
+}
+.cart-summary{
+  width: 1000px;
+  height: 700px;
+  background: #FFFFFF;
+  border: 1px solid #636363;
+  box-sizing: border-box;
+  padding-left: 47px;
+  position: relative;
+}
+.summary-header{
+  display: flex;
+  flex-direction: row;
+  padding-top: 44px;
+  margin-bottom: 82px;
+}
+.summary-header h1{
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 45px;
+  line-height: 53px;
+  /* identical to box height */
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+  color: #000000;
+}
+.summary-header button{
+  padding-left: 39px;
+  border: none;
+  background: #fff;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 35px;
+  text-decoration-line: underline;
+
+  color: #000000;
+}
+li{
+  list-style: none;
+}
+.summary-list{
+  max-height:350px;
+  overflow-y:auto;
+}
+.summary-list li{
+  display: flex;
+  flex-direction: row;
+  /* border-bottom:3px solid #000; */
+}
+.summary-list li img{
+  width: 100px;
+  height: 100px;
+  margin-right: 29px;
+}
+.prod-item-desc{
+  height: 100px;
+  width: 770px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.item-heading{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 770px;
+}
+.remove-item{
+  display: flex;
+  justify-content: flex-end;
+  width: 770px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 35px;
+  text-decoration-line: underline;
+
+  color: #000000;
+}
+.remove-item button{
+  background: #fff;
+  border: none;
+}
+hr{
+  margin-top: 17px;
+  display: block;
+  width: 900px;
+  /* margin-before: 0.5em; 
+  margin-after: 0.5em; 
+  margin-start: auto; 
+  margin-end: auto;  */
+  overflow: hidden; 
+  border-style: inset; 
+  border-width: 1px;
+}
+.total-container{
+  width: 900px;
+  height: 150px;
+  bottom: 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  position: absolute;
+  bottom: 0px;
+}
+.subtotal{
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  width: 400px;
+}
+.label-amount{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.label-amount.total{
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 45px;
+  line-height: 53px;
+  /* identical to box height */
+
+  display: flex;
+  align-items: center;
+  text-align: right;
+
+  color: #000000;
+}
+.label-amount.total label{
+  display: inline-block;
+  width: 150px;
+  text-align: right;
+}
+.label-amount.vat{
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 35px;
+  line-height: 41px;
+  /* identical to box height */
+
+  display: flex;
+  align-items: center;
+  text-align: right;
+
+  color: #000000;
+  margin-bottom: 9px;
+}
+.label-amount.vat label{
+  display: inline-block;
+  width: 150px;
+  text-align: right;
+}
+.label-amount.sub{
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 35px;
+  line-height: 41px;
+  /* identical to box height */
+
+  display: flex;
+  align-items: center;
+  text-align: right;
+
+  color: #000000;
+  margin-bottom: 9px;
+}
+.label-amount.sub label{
+  display: inline-block;
+  width: 150px;
+  text-align: right;
+}
+
+
+
+
+.cart-summary-empty{
+  margin: 0px 84px;
+  width: 100%;
+  height: 148px;
+
+  background: #FFFFFF;
+  border: 1px solid #636363;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.shown{
+  display:block;
+}
+.hidden{
+  display:none;
 }

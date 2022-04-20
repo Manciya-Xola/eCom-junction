@@ -37,4 +37,18 @@ function calculateDiscount(current_price, discounted_price) {
   const discount_percentage = Math.round(discount/current_price *100);
   return discount_percentage;
 }
-export {doFetch, calculateDiscount};
+/**
+ * calculate the VAT of the products
+ * @param {float} params 
+ * @returns discount_percentage
+ * @example
+ * ```js
+ * const current_price = 100;
+ * calculateVat(current_price);
+ * // return 15
+ * ```
+ */
+function calculateVat(current_price) {
+  return current_price*0.15;
+}
+export {doFetch, calculateDiscount, calculateVat};

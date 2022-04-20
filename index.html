@@ -4,9 +4,8 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- <link href="https://blogfonts.com/css/aWQ9MTM3NTA2JnN1Yj01MDYmYz1yJnR0Zj1ST0NLRUIuVFRGJm49cm9ja3dlbGwtZXh0cmEtYm9sZA/Rockwell Extra Bold.ttf" rel="stylesheet" type="text/css"/> -->
   <link rel="stylesheet" href="styles.css">
-  <title>Document</title>
+  <title>Junction</title>
 </head>
 <body>
   <header>
@@ -28,9 +27,9 @@
       <div class="cart-profile">
         <div class="cart">
           <button class="trolly">
-            <img src="./img/Vector (1).png" alt="Cart">
+            <a href="./checkout.html"><img src="./img/Vector (1).png" alt="Cart"></a>
           </button>
-          <button class="items-number">0</button>
+          <button class="items-number" id="number-of-items">0</button>
         </div>
         <div class="profile-image">
           <img src="./img/image.jpg" alt="Profile">
@@ -146,7 +145,7 @@
     </article>
     <article class="show-more">
       <div class="promo-btn">
-        <button><span>Show MORE</span></button>
+        <button id="showmore"><span>Show MORE</span></button>
       </div>
     </article>
   </main>
