@@ -24,7 +24,7 @@ function generateProductsCard(product) {
   product_div.appendChild(img_div)
   const img_link = document.createElement("a");
   //Bound to change does to the folder openned friom a different folder
-  img_link.href = `http://127.0.0.1:5500/eCom-junction/product.html?id=${product.id}`;
+  img_link.href = `./product.html?id=${product.id}`;
   const img_img = document.createElement("img");
   img_img.src = product.image;
   img_img.alt = "Product image";
@@ -52,7 +52,7 @@ function generateProductsCard(product) {
   details_div.appendChild(description_div);
   //title and description
   const heading_link = document.createElement("a");
-  heading_link.href = `http://127.0.0.1:5500/eCom-junction/product.html?id=${product.id}`;
+  heading_link.href = `./product.html?id=${product.id}`;
   const title_h1 = document.createElement("h1");
   title_h1.classList.add("title");
   title_h1.id = "title";
