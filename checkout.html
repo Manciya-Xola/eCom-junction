@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Document</title>
+</head>
+<body>
+  <header>
+    <div class="discount-banner">
+      <h1>free shipping on orders over R 600</h1>
+    </div>
+    <nav>
+      <div class="link-logo">
+        <a href="./index.html">
+          <img src="./img/Logo.jpg" alt="Logo">
+        </a>
+        <ul class="menu">
+          <li><a href="#">What's new</a></li>
+          <li><a href="#">specials</a></li>
+          <li><a href="#">on sale</a></li>
+          <li><a href="#">contact</a></li>
+        </ul>
+      </div>
+      <div class="cart-profile">
+        <div class="cart">
+          <button class="trolly">
+            <img src="./img/Vector (1).png" alt="Cart">
+          </button>
+          <button class="items-number" id="number-of-items">0</button>
+        </div>
+        <div class="profile-image">
+          <img src="./img/image.jpg" alt="Profile">
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <article>
+      <div class="banner">
+        <div class="banner-text-container">
+          <h1>30% off all Winter stock</h1>
+        </div>
+      </div>
+    </article>
+    <article>
+      <div class="cart-container" id="cart-container">
+        <div class="cart-summary">
+          <div class="summary-header">
+            <h1>Your cart has 3 items</h1>
+            <button>Clear cart</button>
+          </div>
+          <ul id="summary-list" class="summary-list">
+            <li>
+              <img src="./img/image 1.jpg" alt="Product">
+              <div class="prod-item-desc">
+                <div class="item-heading">
+                  <h1>Analog Quartz Clock</h1>
+                  <h1>R 45</h1>
+                </div>
+                <div class="remove-item">
+                  <button>Remove</button>
+                </div>
+              </div>
+            </li>
+            <hr>
+          </ul>
+          <div class="total-container">
+            <div class="subtotal">
+              <div class="label-amount sub">
+                <label for="">Sub-total: </label>
+                <p id="sub-total"> R149.97</p>
+              </div>
+              <div class="label-amount vat">
+                <label for="">VAT: </label>
+                <p id="vat"> R149.97</p>
+              </div>
+              <div class="label-amount total">
+                <label for="">Total: </label>
+                <p id="total"> R149.97</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+    <article class="show-more" id="pay-btn">
+      <div class="promo-btn">
+        <button><span>Pay</span></button>
+      </div>
+    </article>
+  </main>
+  <footer>
+    <div class="img-container">
+      <img src="./img/Logo.jpg" alt="">
+    </div>
+  </footer>
+  <script src="./checkout.js" type="module" defer></script>
+</body>
+</html>
