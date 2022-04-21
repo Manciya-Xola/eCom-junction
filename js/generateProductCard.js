@@ -1,5 +1,7 @@
+import { addToCart } from "./shoppingCart.js";
+
 function generateProductCard(product) {
-  console.log(product)
+  //console.log(product)
   const product_container = document.createElement("div");
   product_container.classList.add('product-container');
   const image_div = document.createElement("div");
@@ -58,6 +60,7 @@ function generateProductCard(product) {
   add_to_cart_div.appendChild(promo_btn_div);
   const add_to_cart_btn = document.createElement("button");
   promo_btn_div.appendChild(add_to_cart_btn);
+  add_to_cart_btn.onclick = function () {addToCart(product);};
   const btn_span = document.createElement("span");
   btn_span.textContent = "add to cart";
   add_to_cart_btn.appendChild(btn_span);

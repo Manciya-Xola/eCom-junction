@@ -1,22 +1,36 @@
 let itemsCount = document.getElementById("number-of-items");
 itemsCount.textContent = 0;
 /**
- * store the product into the product cart and the product cart is stored in the local storage
+ * Store the product into the products cart and the product cart is stored in the local storage
+ * The is no repetition of items stored since I added a quantity variable for each item
  * @param {Object} product 
  * @example
  *
  */
 function addToCart(product) {
-  // this method is not taking into account that the product is already in the cart
-  // meaning if the product is already in the cart and its added again, it will have 2 products of the same item
   if (localStorage.getItem("cart") == null) {
     const cart = [];
+    product.quantity = 1;
     cart[0] = product;
     localStorage.setItem("cart", JSON.stringify(cart));
   }
   else{
     const update_cart = JSON.parse(localStorage.getItem("cart"));
-    update_cart.push(product);
+    let contains = false;
+    let count = 0;
+    for (const item of update_cart) {
+      if (item.id === product.id) {
+        console.log("already in the cart")
+        product.quantity = (product.quantity + 1);
+        contains = true;
+        update_cart[count] = product;
+      }
+      count++;
+    }
+    if (!contains) {
+      product.quantity = 1;
+      update_cart.push(product)
+    }
     localStorage.setItem("cart", JSON.stringify(update_cart));
   }
   itemsCount.textContent = JSON.parse(localStorage.getItem('cart')).length;
@@ -44,7 +58,8 @@ function getCartTotal() {
   let total = 0;
   if (localStorage.length>0) {
     update_cart.forEach(item => {
-      total += parseFloat(item.price);
+      //console.log(item);
+      total += (parseFloat(item.discounted_price)*parseInt(item.quantity));
     });
   }
   return total;

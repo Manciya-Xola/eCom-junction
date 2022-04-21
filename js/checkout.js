@@ -58,7 +58,7 @@ function generateCart(number_of_items) {
     const item_header_h1 = document.createElement("h1");
     item_header_h1.textContent = item.name;
     const item_price_h1 = document.createElement("h1");
-    item_price_h1.textContent = item.price;
+    item_price_h1.textContent = `${item.quantity} x R ${item.discounted_price}`;
     item_header_div.appendChild(item_header_h1);
     item_header_div.appendChild(item_price_h1);
     const remove_div = document.createElement("div");
@@ -72,7 +72,7 @@ function generateCart(number_of_items) {
     list_ul.appendChild(hor_hr);
   });
 
-
+  const cartTotal = getCartTotal();
 
   // total summary
   const total_container_div = document.createElement("div");
@@ -89,7 +89,7 @@ function generateCart(number_of_items) {
   const sub_label = document.createElement("label");
   sub_label.textContent = "Sub-total: ";
   const sub_p = document.createElement("p");
-  sub_p.textContent = " R "+(Math.round((getCartTotal()-calculateVat(getCartTotal()))*100)/100);
+  sub_p.textContent = " R "+(Math.round((cartTotal-calculateVat(cartTotal))*100)/100);
   sub_div.appendChild(sub_label);
   sub_div.appendChild(sub_p);
   // total vat
@@ -100,7 +100,7 @@ function generateCart(number_of_items) {
   const vat_label = document.createElement("label");
   vat_label.textContent = "VAT: ";
   const vat_p = document.createElement("p");
-  vat_p.textContent = "R "+(Math.round(calculateVat(getCartTotal())*100)/100);
+  vat_p.textContent = "R "+(Math.round(calculateVat(cartTotal)*100)/100);
   vat_div.appendChild(vat_label);
   vat_div.appendChild(vat_p);
 
@@ -112,7 +112,7 @@ function generateCart(number_of_items) {
   const total_label = document.createElement("label");
   total_label.textContent = "Total: ";
   const total_p = document.createElement("p");
-  total_p.textContent = "R "+(Math.round(getCartTotal()*100)/100);
+  total_p.textContent = "R "+(Math.round(cartTotal*100)/100);
   total_div.appendChild(total_label);
   total_div.appendChild(total_p);
   

@@ -24,7 +24,7 @@ function generateProductsCard(product) {
   product_div.appendChild(img_div)
   const img_link = document.createElement("a");
   //Bound to change does to the folder openned friom a different folder
-  img_link.href = `./product.html?id=${product.id}`;
+  img_link.href = `../pages/product.html?id=${product.id}`;
   const img_img = document.createElement("img");
   img_img.src = product.image;
   img_img.alt = "Product image";
