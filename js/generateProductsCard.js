@@ -13,7 +13,6 @@ import { calculateDiscount } from "./utils.js";
  * ```
  */
 function generateProductsCard(product) {
-  //console.log(product);
   const item = document.createElement("li");
   item.id = product.id;
   const product_div = document.createElement("div");
@@ -23,7 +22,6 @@ function generateProductsCard(product) {
   img_div.classList.add("product-image");
   product_div.appendChild(img_div)
   const img_link = document.createElement("a");
-  //Bound to change does to the folder openned friom a different folder
   img_link.href = `../pages/product.html?id=${product.id}`;
   const img_img = document.createElement("img");
   img_img.src = product.image;

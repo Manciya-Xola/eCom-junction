@@ -1,7 +1,9 @@
 import { clearCart, getCartTotal, removeFromCart } from "./shoppingCart.js";
 import { calculateVat } from "./utils.js";
 const update_cart = JSON.parse(localStorage.getItem("cart"));
-
+/**
+ * Generate the checkout container if the cart is Empty
+ */
 function cartIsEmptyCartGenerator() {
   const cart_container = document.getElementById("cart-container");
   cart_container.textContent = '';
@@ -18,7 +20,10 @@ function cartIsEmptyCartGenerator() {
   pay_article.textContent = "";
 }
 
-
+/**
+ * Generate the checkout container when the user has added items to their cart
+ * @param {Int} number_of_items 
+ */
 function generateCart(number_of_items) {
   const itemsCount = document.getElementById("number-of-items");
   itemsCount.textContent = number_of_items;
@@ -92,6 +97,7 @@ function generateCart(number_of_items) {
   sub_p.textContent = " R "+(Math.round((cartTotal-calculateVat(cartTotal))*100)/100);
   sub_div.appendChild(sub_label);
   sub_div.appendChild(sub_p);
+  
   // total vat
   const vat_div = document.createElement("div");
   vat_div.classList.add("label-amount");

@@ -1,5 +1,9 @@
 import { addToCart } from "./shoppingCart.js";
-
+/**
+ * Generates the product card for 1 product
+ * @param {JSON} product 
+ * @returns {HTML} card
+ */
 function generateProductCard(product) {
   //console.log(product)
   const product_container = document.createElement("div");
